@@ -9,18 +9,20 @@ import (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	answer := rand.Intn(10) + 1
-	var guess int
 
-	fmt.Print("your guess? ")
-	fmt.Scanf("%v", &guess)
+	for {
+		var guess int
 
-	if answer == guess {
-		fmt.Println("Bingo!")
-	} else if answer > guess {
-		fmt.Println("The answer is higher!")
-	} else {
-		fmt.Println("The answer is lower!")
+		fmt.Print("your guess? ")
+		fmt.Scanf("%v", &guess)
+
+		if answer == guess {
+			fmt.Println("Bingo!")
+			break
+		} else if answer > guess {
+			fmt.Println("The answer is higher!")
+		} else {
+			fmt.Println("The answer is lower!")
+		}
 	}
-
-	fmt.Printf("The answer is %v\n", answer)
 }
