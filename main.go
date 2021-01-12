@@ -5,10 +5,8 @@ import (
 )
 
 func main()  {
-	// var name string = "world"
-	// var name = "world"
-	name := "world"
+	name := "world world"
 
-	fmt.Println("hello world")
-	fmt.Println("hello world again")
+	fmt.Printf("hello %v\n", name)
+	fmt.Printf("hello %v again", name)
 }
