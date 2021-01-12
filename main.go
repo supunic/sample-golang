@@ -5,8 +5,8 @@ import (
 )
 
 func main()  {
-	name := "world world"
-
-	fmt.Printf("hello %v\n", name)
-	fmt.Printf("hello %v again", name)
+	var guess int
+	fmt.Print("your guess? ")
+	fmt.Scanf("%v", &guess)
+	fmt.Printf("Your guess is %v\n", guess)
 }
