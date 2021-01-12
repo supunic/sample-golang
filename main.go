@@ -2,10 +2,13 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
-	answer := 6
+	rand.Seed(time.Now().UnixNano())
+	answer := rand.Intn(10) + 1
 	var guess int
 
 	fmt.Print("your guess? ")
@@ -18,4 +21,6 @@ func main() {
 	} else {
 		fmt.Println("The answer is lower!")
 	}
+
+	fmt.Printf("The answer is %v\n", answer)
 }
